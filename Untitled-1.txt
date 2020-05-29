@@ -1,0 +1,43 @@
+MODEL/DB fields:
+
+### LISTINGS:
+id      : INT
+resltor :FOREIGN KEY(REALTOR MODEL)
+title   :STR
+address :STR
+city    :STR
+state   :STR
+zip     :STR
+descriptiton: TEXT
+price   :INT
+Bedroom :INT
+bathroom:INT
+garage  :INT    (DEFAULT- 0)
+sqft    :INT
+lot_size:FLOAT
+is_published :Boolean (DEFAULT- True)
+list_date:DATE
+photo_main:STR
+photo_1-6:STR
+
+
+### REALTOR:
+id      : INT
+name    : STR
+photo   : STR
+description: TEXT
+email   : STR
+phone   : STR
+is_MVP  : boolean   (DEFAULT- 0)
+hire_date: DATE
+
+###CONTACT:
+id      : INT
+user_id : INT
+listing : INT
+listing_id: INT
+name    : STR
+email   : STR
+phone   : STR
+message : TEXT
+contact_date: DATE
